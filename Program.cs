@@ -8,7 +8,7 @@ namespace Calculator
         {
             double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
 
-            // Use a switch statement to do the math.
+            // the math.
             switch (op)
             {
                 case "a":
@@ -21,7 +21,7 @@ namespace Calculator
                     result = num1 * num2;
                     break;
                 case "d":
-                    // Ask the user to enter a non-zero divisor.
+                    // error handling for non-zero divisor.
                     if (num2 != 0)
                     {
                         result = num1 / num2;
@@ -40,7 +40,7 @@ namespace Calculator
         static void Main(string[] args)
         {
             bool endApp = false;
-            // Display title as the C# console calculator app.
+            // Display title 
             Console.WriteLine("Welcome to Abu's console calculator app\r");
             Console.WriteLine("------------------------\n");
 
@@ -103,7 +103,7 @@ namespace Calculator
                 Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
                 if (Console.ReadLine() == "n") endApp = true;
 
-                Console.WriteLine("\n"); // Friendly linespacing.
+                Console.WriteLine("\n");
             }
             return;
         }
